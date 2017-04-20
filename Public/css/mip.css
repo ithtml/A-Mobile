@@ -1,0 +1,121 @@
+html {
+    font-size: 100px;
+}
+
+@media screen and (min-width:320px) and (max-width:375px) {
+    html {
+        font-size: 100px
+    }
+}
+
+@media screen and (min-width:376px) and (max-width:414px) {
+    html {
+        font-size: 120px
+    }
+}
+
+@media screen and (min-width:415px) and (max-width:639px) {
+    html {
+        font-size: 150px
+    }
+}
+
+@media screen and (min-width:640px) and (max-width:719px) {
+    html {
+        font-size: 200px
+    }
+}
+
+@media screen and (min-width:720px) and (max-width:749px) {
+    html {
+        font-size: 225px
+    }
+}
+
+@media screen and (min-width:750px) and (max-width:799px) {
+    html {
+        font-size: 235px
+    }
+}
+
+@media screen and (min-width:800px) {
+    html {
+        font-size: 250px
+    }
+}
+body {
+    font-size: 0.14rem;
+}
+.navzt {
+            background: #971827;
+            background-size: cover;
+            overflow: hidden;
+            height: 1.75px;
+            font-size: 0.34rem;
+        }
+        
+        .navzt ul.wrap {
+            width: 95%;
+            margin: 0 auto;
+            padding: 0;
+            height: 100%;
+            display: -webkit-flex;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .navzt ul.wrap li {
+            list-style: none;
+            color: #fff;
+        }
+        
+        .navzt ul.wrap li a {
+            text-decoration: none;
+            color: #fff;
+            /*padding: 10px 10px;*/
+        }
+        
+        .footer {
+            background: #333366;
+            color: #669;
+            text-align: center;
+            font-size: 0.24rem;
+            overflow: hidden;
+            padding-bottom: 0.25rem;
+        }
+        
+        .footer p {
+            margin-top: 0.2rem;
+        }
+        
+        /*@media screen and (max-width: 768px) {
+            .navzt {
+                height: 96px;
+                font-size: 28px;
+            }
+        }
+        
+        @media screen and (max-width: 414px) {
+            .navzt {
+                height: 52px;
+                font-size: 18px;
+            }
+        }
+        
+        @media screen and (max-width: 375px) {
+            .navzt {
+                height: 47px;
+                font-size: 16px;
+            }
+            .footer {
+                font-size: 18px;
+            }
+        }
+        
+        @media screen and (max-width: 320px) {
+            .navzt {
+                height: 40px;
+                font-size: 14px;
+            }
+        }*/
