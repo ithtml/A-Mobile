@@ -5,13 +5,10 @@ var less = require('gulp-less');
 var px2rem = require('gulp-px2rem-plugin');
 var autoprefixer = require('gulp-autoprefixer');
 var reload = browserSync.reload;
-
 var replace = require('gulp-replace');
 var inlinesource = require('gulp-inline-source');
 var imagemin = require('gulp-imagemin');
 var del = require('del');
-
-
 
 // 设置命令行变量参数 
 var folder = {
@@ -26,11 +23,13 @@ var folders = mist(process.argv.slice(2), folder);
 gulp.task('less', function () {
   return gulp.src('./src/' + folders.dir + "/css.less")
     .pipe(less())
-    // .pipe(px2rem())
-    .pipe(px2rem({'width_design':640,'valid_num':4,'pieces':6.4}))
+    .pipe(px2rem({ 'width_design': 640, 'valid_num': 4, 'pieces': 6.4 }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'Android >= 4.0'],
-      cascade: true
+      cascade: true, //是否美化属性值 默认：true 像这样：
+      //-webkit-transform: rotate(45deg);
+      //        transform: rotate(45deg);
+      remove: false //是否去掉不必要的前缀 默认：true 
     }))
     .pipe(gulp.dest('./src/' + folders.dir))
     .pipe(reload({ stream: true }));
