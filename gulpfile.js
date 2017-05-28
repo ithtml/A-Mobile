@@ -2,7 +2,8 @@ var gulp = require('gulp');
 var mist = require('minimist');
 var browserSync = require('browser-sync').create();
 var less = require('gulp-less');
-var px2rem = require('gulp-px2rem-plugin');
+// var px2rem = require('gulp-px2rem-plugin');
+var px2rem = require('gulp-px3rem');
 var autoprefixer = require('gulp-autoprefixer');
 var reload = browserSync.reload;
 var replace = require('gulp-replace');
@@ -23,7 +24,13 @@ var folders = mist(process.argv.slice(2), folder);
 gulp.task('less', function () {
   return gulp.src('./src/' + folders.dir + "/css.less")
     .pipe(less())
-    .pipe(px2rem({ 'width_design': 640, 'valid_num': 4, 'pieces': 6.4 }))
+    // .pipe(px2rem({
+    //   baseDpr: 2,             // base device pixel ratio (default: 2)
+    //   threeVersion: false,    // whether to generate @1x, @2x and @3x version (default: false)
+    //   remVersion: true,       // whether to generate rem version (default: true)
+    //   remUnit: 100,            // rem unit value (default: 75)
+    //   remPrecision: 6         // rem precision (default: 6)
+    // }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'Android >= 4.0'],
       cascade: true, //是否美化属性值 默认：true 像这样：
@@ -77,7 +84,7 @@ gulp.task('image', ['inline'], function () {
 });
 gulp.task('del', ['image'], function (cb) {
   del([
-    './src/' + folders.dir + '/css.css',
+    './src/' + folders.dir + '/css.debug.css',
     // 这里我们使用一个通配模式来匹配 `mobile` 文件夹中的所有东西
     // 'dist/mobile/**/*',
     // 我们不希望删掉这个文件，所以我们取反这个匹配模式

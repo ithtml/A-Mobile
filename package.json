@@ -21,6 +21,7 @@
     "gulp-inline-source": "^3.1.0",
     "gulp-less": "^3.3.0",
     "gulp-px2rem-plugin": "^0.4.0",
+    "gulp-px3rem": "^0.3.0",
     "gulp-replace": "^0.5.4",
     "minimist": "^1.2.0"
   }

@@ -1,0 +1,29 @@
+body {
+  font-family: "Microsoft YaHei";
+}
+.box {
+  overflow: hidden;
+}
+.box .title {
+  text-align: center;
+  background: url(images/border.gif) no-repeat bottom center;
+  background-size: 0.52rem 0.02rem;
+  padding-bottom: 0.1rem;
+}
+.box .title h1 {
+  font-size: 0.15rem;
+  margin-top: 0.23rem;
+  font-weight: 600;
+}
+.box .title p {
+  font-size: 0.11rem;
+  margin-top: 0.05rem;
+}
+.box .main {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 0.37rem;
+}
+.b1 {
+  background: #f5f8fa;
+}
